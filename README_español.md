@@ -1,93 +1,113 @@
-# RETARD — Sistema de Navegación y Búsqueda Multi-Interfaz
+# Student Utility Web App — Proyecto "RETARD"
 
-## Descripción General
-**RETARD** es un sistema de navegación dual diseñado para cerrar la brecha entre la funcionalidad de escritorio y las experiencias web modernas. El proyecto se centra en la accesibilidad, la claridad visual y una experiencia de usuario (UX) intuitiva, ofreciendo herramientas adaptadas a diversos perfiles demográficos.
+[![Licencia: MIT](https://img.shields.io/badge/Licencia-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python: 3.x](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
+[![JavaScript: Vanilla](https://img.shields.io/badge/JS-Vanilla-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-El sistema integra una **suite de escritorio basada en Python** con una **aplicación web responsiva**, demostrando cómo diferentes tecnologías pueden coexistir para facilitar el acceso a recursos digitales.
+## 📌 Descripción General
+**Student Utility Web App (RETARD)** es un ecosistema de interfaz múltiple diseñado para optimizar el flujo de trabajo digital de un estudiante. El proyecto conecta una aplicación web moderna y responsiva con utilidades de escritorio ligeras, centralizando motores de búsqueda, recursos académicos y navegación social en una experiencia cohesiva.
 
----
-
-## Objetivos del Proyecto
-* **Accesibilidad Universal:** Interfaces simplificadas para usuarios mayores y estéticas modernas para usuarios jóvenes.
-* **Experiencia de Búsqueda Directa:** Minimizar la fricción al acceder a motores de búsqueda globales.
-* **Integración Multitecnología:** Demostrar la interoperabilidad entre Python (Tkinter) y estándares web (HTML/CSS/JS).
-* **Enfoque en UI/UX:** Priorizar el reconocimiento visual sobre el texto denso para reducir la carga cognitiva.
+Este repositorio es una demostración integral de **integración multi-stack**, combinando estándares web (HTML5/CSS3/JS) con desarrollo de interfaces gráficas en Python.
 
 ---
 
-## Tecnologías Utilizadas
+## 🚀 Características Clave
 
-### Entorno de Escritorio
-* **Lenguaje:** Python 3
-* **Librería:** Tkinter (GUI)
-* **Integración:** Módulo `webbrowser` para control del navegador a nivel de sistema.
-
-### Interfaz Web
-* **Frontend:** HTML5 y CSS3 (Animaciones avanzadas y diseño responsivo).
-* **Lógica:** JavaScript Vanilla (ES6+).
-* **Recursos:** Google Fonts y Font Awesome.
-* **Nota:** El proyecto ha sido desarrollado **sin frameworks** para demostrar el dominio de los estándares web fundamentales.
+* **Arquitectura Web Modular:** Sistema de múltiples páginas diseñado para una navegación escalable.
+* **Motor de Interfaz Adaptativo:** Implementación personalizada de Modo Oscuro mediante lógica de estado persistente.
+* **Utilidades Multiplataforma:** Herramientas de escritorio independientes en Python para consultas web instantáneas.
+* **Frontend "Zero-Framework":** Construido totalmente con Vanilla JS y CSS Puro para demostrar el dominio de los fundamentos básicos.
+* **Enfoque en Accesibilidad:** Elementos de alto contraste, iconografía intuitiva y navegación asistida por tooltips.
+* **Experiencia de Usuario Dinámica:** Animaciones basadas en keyframes y estados interactivos (*hover*) para mejorar el engagement.
 
 ---
 
-## Componentes del Sistema
+## 🛠️ Stack Tecnológico
 
-### 1. Aplicaciones de Escritorio (Python)
-Ubicadas en el directorio `py/`, estas herramientas están diseñadas para ofrecer alta visibilidad e interacción directa.
+### Core de Frontend
+* **HTML5 y CSS3:** Layouts avanzados, arquitectura Flexbox/Grid y variables CSS.
+* **JavaScript (ES6+):** Manipulación del DOM, delegación de eventos y gestión de temas.
+* **Tipografía e Iconos:** Integración de Google Fonts y Font Awesome.
 
-* **`main.py`**: Utilidad de búsqueda de alto contraste. Incluye elementos de texto de gran tamaño y llamadas al sistema para abrir consultas en el navegador predeterminado.
-* **`busca.py`**: Interfaz secundaria experimental (denominada *Astral*) utilizada para pruebas de layouts alternativos.
-
-### 2. Interfaz Web
-La aplicación web es modular y comparte una identidad visual unificada junto con un motor de estado para el tema visual.
-
-| Página | Descripción |
-| :--- | :--- |
-| `index.html` | Página de inicio con secuencia de título animada. |
-| `Busqueda.html` | Hub de motores de búsqueda (Google, Bing, DuckDuckGo, etc.). |
-| `Recomendaciones.html` | Espacio de descubrimiento curado para intereses específicos. |
-| `Redesociales.html` | Panel visual centralizado para redes sociales. |
-| `Sesion.html` | Prototipo de interfaz de inicio de sesión con integración social. |
+### Integración de Escritorio
+* **Python 3:** Lógica de backend para interacciones de escritorio.
+* **Tkinter:** Framework de GUI para la gestión nativa de ventanas.
+* **Webbrowser API:** Enlaces a nivel de sistema para la orquestación del navegador.
 
 ---
 
-## Características Clave
+## 📂 Estructura del Proyecto
 
-### Navegación y UX
-* **Diseño Orientado a Iconos:** Uso de reconocimiento visual y acciones codificadas por colores para aumentar la velocidad de navegación.
-* **Tooltips Interactivos:** Información contextual al pasar el cursor para mantener la interfaz limpia.
-* **Motor de Modo Oscuro:** Implementación personalizada en JavaScript que alterna temas en todo el DOM sin recargar la página.
-
-### Arquitectura de Estilos (CSS)
-El CSS está desacoplado en módulos especializados para mejorar la mantenibilidad:
-* `stylebtn.css`: Controla la lógica de botones, iconos y posicionamiento de tooltips.
-* `styledit.css`: Gestiona animaciones de fotogramas clave (keyframes) y fondos dinámicos.
-* `estilos.css`: Define el diseño base, formularios y variables del Modo Oscuro.
-
-### Sistema de Modales
-Incluye un sistema de ventanas modales ligeras implementado exclusivamente con **CSS Puro**, demostrando patrones de UI eficientes sin sobrecarga de librerías externas.
-
----
-
-## Estructura del Proyecto
 ```text
-RETARD/
-├── py/
-│   ├── main.py            # GUI Principal en Python
-│   └── busca.py           # GUI Secundaria
+student-utility-web-app/
+├── index.html              # Hub central y secuencia de inicio
+├── Sesion.html             # Prototipo avanzado de interfaz de Login
+├── Busqueda.html           # Hub federado de motores de búsqueda
+├── Recomendaciones.html    # Recursos académicos y de ocio curados
+├── Redesociales.html       # Matriz de navegación de redes sociales
 ├── css/
-│   └── estilos.css        # Layout y Temas
+│   ├── estilos.css         # Estilos globales, variables y Modo Oscuro
+│   ├── stylebtn.css        # Lógica de componentes para iconos y botones
+│   └── styledit.css        # Efectos visuales, animaciones y fondos dinámicos
 ├── js/
-│   └── main.js            # Lógica de Temas y UI
-├── stylebtn.css           # Estilos de componentes
-├── styledit.css           # Lógica de animaciones
-├── index.html             # Punto de entrada principal
-└── [Otros Módulos HTML]
+│   └── main.js             # Lógica central de UI y gestión de estados
+└── py/
+    ├── main.py             # Utilidad principal de búsqueda (Tkinter)
+    └── busca.py            # Variación experimental de la interfaz
+🧠 Aspectos Técnicos Destacados
+1. Motor de Temas Unificado
+La aplicación utiliza un sistema de alternancia de clases CSS sincronizado mediante JavaScript, permitiendo transiciones fluidas entre el modo claro y oscuro sin parpadeos visuales.
 
-Alcance y Limitaciones
-Backend: Este es un prototipo de frontend. No incluye base de datos activa ni lógica de autenticación en el servidor.
+JavaScript
+const bntSwitch = document.querySelector('#switch');
+bntSwitch.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    bntSwitch.classList.toggle('active');
+});
+2. Sistema de Modales en CSS Puro
+Para optimizar el rendimiento, los modales se gestionan mediante la técnica de Checkbox Hack, eliminando la necesidad de ejecución pesada de JS para capas de interfaz sencillas.
 
-Independencia: Las herramientas de Python y la interfaz Web funcionan como módulos independientes dentro del mismo ecosistema.
+3. Puente Python-Web
+La suite de escritorio proporciona una interfaz directa con el navegador predeterminado del sistema operativo, demostrando la capacidad de crear herramientas que interactúan con aplicaciones a nivel de sistema.
 
-Licencia
-Este proyecto está bajo la Licencia MIT.
+Python
+def search():
+    query = entry_field.get()
+    webbrowser.open(query)
+🔧 Instalación y Configuración
+Interfaz Web
+Clona el repositorio:
+
+Bash
+git clone [https://github.com/tu-usuario/student-utility-web-app.git](https://github.com/tu-usuario/student-utility-web-app.git)
+Abre index.html en cualquier navegador web moderno.
+
+Herramientas de Escritorio
+Asegúrate de tener instalado Python 3.x.
+
+Navega al directorio py/ y ejecuta:
+
+Bash
+python main.py
+📈 Hoja de Ruta (Future Roadmap)
+[ ] Estado Persistente: Implementación de localStorage para guardar preferencias de tema.
+
+[ ] Integración de API: Sugerencias de búsqueda en tiempo real mediante Fetch API.
+
+[ ] Autenticación: Integración de backend con Firebase o Node.js.
+
+[ ] Optimización Móvil: Soporte completo para PWA (Progressive Web App).
+
+🎓 Contexto Educativo
+Este proyecto fue desarrollado como pieza de portafolio para demostrar competencia en:
+
+Arquitectura Frontend: Organización de estructuras complejas de CSS y HTML.
+
+Implementación de Lógica: Uso de JavaScript para resolver problemas de UI del mundo real.
+
+Herramientas de Productividad: Creación de accesos directos de escritorio para mejorar el flujo de trabajo.
+
+📄 Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+Desarrollado con 💡 y ☕ para la comunidad estudiantil.
