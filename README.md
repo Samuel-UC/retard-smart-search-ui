@@ -1,94 +1,113 @@
-# RETARD — Multi-Interface Search & Navigation System
+# Student Utility Web App — Project "RETARD"
 
-## Overview
-**RETARD** is a dual-interface navigation system designed to bridge the gap between desktop functionality and modern web experiences. The project focuses on accessibility, visual clarity, and intuitive UX, providing tools tailored for diverse user demographics.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python: 3.x](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
+[![JavaScript: Vanilla](https://img.shields.io/badge/JS-Vanilla-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-The system integrates a **Python-based desktop suite** with a **responsive web application**, demonstrating how different technologies can coexist to provide seamless access to web resources.
+## 📌 Overview
+**Student Utility Web App (RETARD)** is a multi-interface ecosystem designed to streamline a student's digital workflow. It bridges the gap between a modern, responsive web application and lightweight desktop utilities, centralizing search engines, academic resources, and social navigation into a single cohesive experience.
 
----
-
-## Project Objectives
-* **Universal Accessibility:** Providing simplified interfaces for older users while maintaining a modern aesthetic for younger demographics.
-* **Direct Search Experience:** Minimizing friction in accessing global search engines.
-* **Multi-Technology Integration:** Demonstrating the interoperability between Python (Tkinter) and vanilla web technologies (HTML/CSS/JS).
-* **UI/UX Research:** Focus on visual recognition over heavy text to reduce cognitive load.
+This repository serves as a comprehensive demonstration of **multi-stack integration**, combining web standards (HTML5/CSS3/JS) with Python-based GUI development.
 
 ---
 
-## Tech Stack
+## 🚀 Key Features
 
-### Desktop Core
-* **Language:** Python 3
-* **Library:** Tkinter (GUI)
-* **Integration:** `webbrowser` module for system-level browser control.
-
-### Web Interface
-* **Frontend:** HTML5 & CSS3 (Advanced animations and responsive layouts).
-* **Logic:** Vanilla JavaScript (ES6+).
-* **Assets:** Google Fonts & Font Awesome.
-* **Note:** This project is built **without frameworks** to demonstrate core proficiency in web standards.
+* **Modular Web Architecture:** A clean, multi-page system for scalable navigation.
+* **Adaptive UI Engine:** Custom Dark Mode implementation using persistent state logic.
+* **Cross-Platform Utilities:** Standalone Python desktop tools for instant web queries.
+* **Zero-Framework Frontend:** Built entirely with Vanilla JS and Pure CSS to demonstrate core fundamental mastery.
+* **Accessibility Focused:** High-contrast elements, intuitive iconography, and tooltip-assisted navigation.
+* **Dynamic UX:** Keyframe animations and interactive hover states for an engaging user experience.
 
 ---
 
-## System Components
+## 🛠️ Tech Stack
 
-### 1. Desktop Applications (Python)
-The `py/` directory contains standalone tools designed for high-contrast visibility and direct interaction.
+### Frontend Core
+* **HTML5 & CSS3:** Advanced layouts, Flexbox/Grid architecture, and CSS variables.
+* **JavaScript (ES6+):** DOM manipulation, event delegation, and theme toggling.
+* **Typography & Icons:** Google Fonts & Font Awesome integration.
 
-* **`main.py`**: A high-contrast search utility. Features large text elements and system-level hooks to open queries directly in the default browser.
-* **`busca.py`**: An experimental secondary interface (labeled *Astral*) used for testing alternative GUI layouts.
-
-### 2. Web Interface Structure
-The web application is modular, sharing a unified design language and a centralized state for the visual theme.
-
-| Page | Description |
-| :--- | :--- |
-| `index.html` | Landing page featuring an animated title sequence. |
-| `Busqueda.html` | Search engine hub (Google, Bing, DuckDuckGo, etc.). |
-| `Recomendaciones.html` | Curated discovery space for niche interests (Crafts, Cooking). |
-| `Redesociales.html` | Centralized visual hub for social media platforms. |
-| `Sesion.html` | A comprehensive Login UI prototype with social integration. |
+### Desktop Integration
+* **Python 3:** Backend logic for desktop interactions.
+* **Tkinter:** GUI framework for native window management.
+* **Webbrowser API:** System-level hooks for browser orchestration.
 
 ---
 
-## Key Features
+## 📂 Project Structure
 
-### Navigation & UX
-* **Icon-Driven Design:** Uses visual recognition and color-coded actions to improve navigation speed.
-* **Interactive Tooltips:** Contextual information on hover to maintain a clean interface.
-* **Dark Mode Engine:** A custom JavaScript implementation that toggles themes across the entire DOM without page reloads.
-
-### Styling Architecture
-The CSS is decoupled into specialized modules for better maintainability:
-* `stylebtn.css`: Handles complex button logic, icons, and tooltip positioning.
-* `styledit.css`: Manages keyframe animations and dynamic backgrounds.
-* `estilos.css`: Defines the core layout, form factor, and Dark Mode variables.
-
-### Information Modals
-A lightweight modal system implemented using **Pure CSS**, demonstrating efficient UI patterns without the overhead of external JavaScript libraries.
-
----
-
-## Project Structure
 ```text
-
-RETARD/
-├── py/
-│   ├── main.py            # Main Python GUI
-│   └── busca.py           # Secondary GUI
+student-utility-web-app/
+├── index.html              # Central hub & landing sequence
+├── Sesion.html             # Advanced Login UI prototype
+├── Busqueda.html           # Federated search engine hub
+├── Recomendaciones.html    # Curated academic & hobby resources
+├── Redesociales.html       # Social media navigation matrix
 ├── css/
-│   └── estilos.css        # Layout & Theme
+│   ├── estilos.css         # Global styles, variables, & Dark Mode
+│   ├── stylebtn.css        # Component-based icon & button logic
+│   └── styledit.css        # FX, animations, & dynamic backgrounds
 ├── js/
-│   └── main.js            # Theme Logic
-├── stylebtn.css           # Component Styles
-├── styledit.css           # Animation Logic
-├── index.html             # Entry Point
-└── [Other HTML Modules]
+│   └── main.js             # Core UI logic & state management
+└── py/
+    ├── main.py             # Primary Desktop Search Utility (Tkinter)
+    └── busca.py            # Experimental GUI variation
+🧠 Technical Highlights
+1. Unified Theme Engine
+The application utilizes a CSS-class toggling system synchronized via JavaScript, allowing for seamless Dark/Light mode transitions without UI flickering.
 
-Scope & Limitations
-Backend: This is a frontend-focused prototype. There is no active database or server-side authentication.
+JavaScript
+const bntSwitch = document.querySelector('#switch');
+bntSwitch.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    bntSwitch.classList.toggle('active');
+});
+2. Pure CSS Modal System
+To optimize performance, modals are handled via the Checkbox Hack, eliminating the need for heavy JS execution for simple UI overlays.
 
-Independence: The Python tools and the Web interface operate as independent modules within the same ecosystem.
+3. Python-to-Web Bridge
+The desktop suite provides a direct interface to the OS's default browser, showcasing the ability to build tools that interact with system-level applications.
 
-License
-This project is licensed under the MIT License.
+Python
+def search():
+    query = entry_field.get()
+    webbrowser.open(query)
+🔧 Installation & Setup
+Web Interface
+Clone the repository:
+
+Bash
+git clone [https://github.com/your-username/student-utility-web-app.git](https://github.com/your-username/student-utility-web-app.git)
+Open index.html in any modern web browser.
+
+Desktop Tools
+Ensure Python 3.x is installed on your system.
+
+Navigate to the py/ directory and run:
+
+Bash
+python main.py
+📈 Future Roadmap
+[ ] Persistent State: Implementation of localStorage to save user theme preferences.
+
+[ ] API Integration: Real-time search suggestions via Fetch API.
+
+[ ] Authentication: Backend integration with Firebase or Node.js.
+
+[ ] Mobile Optimization: Full PWA (Progressive Web App) support.
+
+🎓 Educational Context
+This project was developed as a portfolio piece to demonstrate proficiency in:
+
+Frontend Architecture: Organizing complex CSS and HTML structures.
+
+Logic Implementation: Using JavaScript for real-world UI problems.
+
+Tooling: Creating desktop shortcuts to enhance productivity.
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Developed with 💡 and ☕ for the student community.
